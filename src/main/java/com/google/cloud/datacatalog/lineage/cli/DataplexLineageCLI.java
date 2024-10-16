@@ -44,7 +44,7 @@ public class DataplexLineageCLI {
     @Option(
         names = {"-c", "--command"},
         description =
-            "Command to execute: 'emit-ol-event', 'search-links', 'get-processes', 'get-runs', 'get-events', 'get-processes-for-link', 'get-runs-for-link', 'get-events-for-link'",
+            "Command to execute: 'emit-ol-event', 'get-links', 'get-processes', 'get-runs', 'get-events', 'get-processes-for-link', 'get-runs-for-link', 'get-events-for-link'",
         required = true)
     private String command;
 
@@ -130,7 +130,7 @@ public class DataplexLineageCLI {
           case "emit-ol-event":
             emitEvent(locationName);
             break;
-          case "search-links":
+          case "get-links":
             searchLinks(locationName);
             break;
           case "get-processes":

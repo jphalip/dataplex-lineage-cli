@@ -101,7 +101,8 @@ public class DataplexTransport implements AutoCloseable {
               .setOpenLineage(openLineageStruct)
               .build();
       if (syncLineageClient != null) {
-        ProcessOpenLineageRunEventResponse response = syncLineageClient.processOpenLineageRunEvent(request);
+        ProcessOpenLineageRunEventResponse response =
+            syncLineageClient.processOpenLineageRunEvent(request);
         System.out.println("Event name: " + response.getLineageEvents(0));
       } else {
         handleRequestAsync(request);

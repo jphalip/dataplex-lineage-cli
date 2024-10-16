@@ -32,7 +32,7 @@ java -jar dataplex-lineage-cli.jar [OPTIONS]
 ### Available Commands
 
 - `emit-ol-event`: Emit a lineage event
-- `search-links`: Search for links between data assets
+- `get-links`: Search for links between data assets
 - `get-processes`: Retrieve processes for a project
 - `get-runs`: Retrieve runs for a project or process
 - `get-events`: Retrieve events for a project, process, or run
@@ -55,7 +55,7 @@ java -jar dataplex-lineage-cli.jar [OPTIONS]
     - `-e, --event`: JSON string of the OpenLineage event to emit
     - `--mode`: Operation mode: 'sync' or 'async'
 
-- `search-links`:
+- `get-links`:
     - `--source`: Source for link search
     - `--target`: Target for link search
 
@@ -79,7 +79,7 @@ java -jar dataplex-lineage-cli.jar -c emit-event --project your-project-id -l us
 2. Search for links:
 
 ```sh
-java -jar dataplex-lineage-cli.jar -c search-links --project your-project-id -l us-central1 --source "gcs:example-bucket.warehouse/transactions"
+java -jar dataplex-lineage-cli.jar -c get-links --project your-project-id -l us-central1 --source "gcs:example-bucket.warehouse/transactions"
 ```
 
 3. Get events for a specific OpenLineage job:

@@ -394,7 +394,7 @@ public class DataplexCLIIntegrationTest {
     int exitCode =
         new CommandLine(new DataplexLineageCLI.DataplexCommands())
             .execute(
-                "-c", "search-links",
+                "-c", "get-links",
                 "-p", PROJECT_ID,
                 "-l", LOCATION,
                 "--ol-job-namespace", olJobNamespace,
